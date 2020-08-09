@@ -9,12 +9,13 @@ public class ListNode<T> {
         this.next = null;
     }
 
-    public static <T>ListNode<T> getListNode(T[] list){
+    public static <T> ListNode<T> getListNode(T[] list){
         if(list.length == 0){
             return null;
         }
-        ListNode head = new ListNode(-1);
-        ListNode curr = head;
+        
+        ListNode<T> head = new ListNode(-1);
+        ListNode<T> curr = head;
         for(int i = 0; i < list.length; i++){
             curr.next = new ListNode<T>(list[i]);
             curr = curr.next;
